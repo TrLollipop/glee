@@ -1,0 +1,120 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 50px 0 55px;
+
+  &__img {
+    display: inline-block;
+    margin-right: 13px;
+  }
+
+  &__text {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 58px;
+    @extend %rubik-500;
+  }
+}
+
+.menu {
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    transition: all .3s;
+  }
+
+  &__item:hover::after {
+    content: '+';
+    position: absolute;
+    right: -12px;
+  }
+  
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &__item--active::after {
+    content: '+';
+    position: absolute;
+    right: -12px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: $text;
+    @extend %rubik-500;
+  }
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+
+  &__search {
+    padding: 18px;
+    background-color: $search;
+    border-radius: 50%;
+  }
+
+  &__shop {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    background-image: url('../images/icons/background-shop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__liked {
+    margin: 22px 30px 12px 40px;
+    position: relative;
+  }
+
+  &__border {
+    margin: 9px 0 10px;
+  }
+
+  &__cart {
+    margin: 22px 40px 12px 30px;
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    color: $title;
+    @extend %dmsans-400;
+  }
+
+  &__menu {
+    padding: 15px;
+    background-color: $button;
+    border-radius: 50%;
+  }
+}
+
+
+@import 'media';
