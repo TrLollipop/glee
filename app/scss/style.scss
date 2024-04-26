@@ -11,9 +11,12 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
   margin: 50px 0 55px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
 
   &__img {
     display: inline-block;
@@ -24,6 +27,7 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 58px;
+    color: $text;
     @extend %rubik-500;
   }
 }
@@ -116,5 +120,138 @@
   }
 }
 
+.footer {
+  padding-top: 80px;
+
+  &__container {
+    width: 1170px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  border-bottom: 1px solid #dae4e9;
+  padding-bottom: 100px;
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__contacts {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+
+  &__contacts-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $bot-text;
+  }
+
+  &__services {
+    width: 170px;
+    margin-right: 130px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+    color: $bot-title;
+    margin: 22px 0 20px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 32px;
+    color: $bot-text;
+  }
+
+  &__account {
+    width: 170px;
+    margin-right: 130px;
+  }
+
+  &__newsletter {
+    width: 270px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $bot-text;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 170px;
+    height: 38px;
+    border: none;
+    padding: 13px;
+    background-color: $accent;
+
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+      @extend %dmsans-400;
+    }
+  }
+
+  &__button {
+    width: 100px;
+    height: 38px;
+    border: none;
+    background-color: $button;
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    @extend %dmsans-400;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  &__copy {
+    font-size: 14px;
+    line-height: 32px;
+    color: $bot-text;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 12px;
+  }
+
+  &__item + &__item {
+    position: relative;
+
+    ::before {
+      position: absolute;
+      content: '|';
+      font-size: 17px;
+      line-height: 17px;
+      left: 0;
+      bottom: 9px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 32px;
+    color: $bot-text;
+  }
+}
 
 @import 'media';
