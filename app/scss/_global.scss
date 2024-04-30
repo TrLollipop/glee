@@ -22,3 +22,55 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  text-align: center;
+  color: #191919;
+  font-size: 36px;
+  line-height: 46px;
+  @extend %dmsans-700;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 25px 100px 20px 25px;
+  font-size: 15px;
+  line-height: 12px;
+  color: white;
+  background-color: $button;
+  @extend %rubik-500;
+}
+
+.link::after {
+  content: '';
+  right: 19px;
+  top: 25px;
+  width: 22px;
+  height: 9px;
+  position: absolute;
+  background-image: url('../images/icons/link-arrow.svg');
+}
+
+.galery-category {
+  text-align: center;
+  margin: 30px 0 75px;
+}
+
+.galery-button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: #8b8b8b;
+  @extend %dmsans-700;
+  cursor: pointer;
+
+  & + & {
+    margin-left: 25px;
+  }
+}
+
+.mixitup-control-active {
+  color: #191919;
+}
