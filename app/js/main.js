@@ -3,6 +3,7 @@ $(function() {
     arrows: false,
     dots: true,
     fade: true,
+    autoplay: true,
   });
 
   // $('.products__galery-item').on('mouseenter', function() {
