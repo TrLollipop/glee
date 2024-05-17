@@ -23,6 +23,11 @@ body {
   padding: 0 15px;
 }
 
+.about__container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .title {
   text-align: center;
   color: #191919;
@@ -73,4 +78,40 @@ body {
 
 .mixitup-control-active {
   color: #191919;
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-right: 20px;
+    position: relative;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      color: #8b8f94;
+      right: 8px;
+      top: 1px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #8b8f94;
+  }
 }
